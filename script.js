@@ -86,7 +86,7 @@ function edit(ind) {
   saveTaskButton.style.display = "block";
 }
 
-saveTaskButton.addEventListener("click", (i) => {
+saveTaskButton.addEventListener("click", () => {
   // this is the challenge for this project
   // in this part you will need to add the following:
   // 1. call the todo and let it equal localstorage.getitem("todo")
