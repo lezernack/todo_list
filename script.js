@@ -22,7 +22,7 @@ addTaskButton.addEventListener("click", (e) => {
   }
   // check if text.value is empty, alert that the input is empty and return
   if (text.value === "") {
-    alert("The input is empty");
+    alert("Nothing has been put into the list");
     return false;
   }
   // now that you've parsed the value, push the text.value to the todoArray.
@@ -86,7 +86,7 @@ function edit(ind) {
   saveTaskButton.style.display = "block";
 }
 
-saveTaskButton.addEventListener("click", () => {
+saveTaskButton.addEventListener("click", (i) => {
   // this is the challenge for this project
   // in this part you will need to add the following:
   // 1. call the todo and let it equal localstorage.getitem("todo")
@@ -95,7 +95,7 @@ saveTaskButton.addEventListener("click", () => {
   todoArray = JSON.parse(todo);
   // then finish out the rest of the following instructions:
   // 1. let id be the same as your saveInd.value
-  let id = saveInd.value;
+  id = saveInd.value;
   // 2. switch the add and save displays to block and none respectively.
   addTaskButton.style.display = "block";
   saveTaskButton.style.display = "none";
