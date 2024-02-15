@@ -90,14 +90,15 @@ saveTaskButton.addEventListener("click", () => {
   // this is the challenge for this project
   // in this part you will need to add the following:
   // 1. call the todo and let it equal localstorage.getitem("todo")
-  todo = localStorage.getItem("todo");
+  const todo = localStorage.getItem("todo");
   // 2. assign the todoArray equal to JSON.parse(todo)
   todoArray = JSON.parse(todo);
   // then finish out the rest of the following instructions:
   // 1. let id be the same as your saveInd.value
-  id = saveInd.value;
+  let id = saveInd.value;
   // 2. switch the add and save displays to block and none respectively.
   addTaskButton.style.display = "block";
+
   saveTaskButton.style.display = "none";
   // 3. set text value to empty
   text.value = "";
