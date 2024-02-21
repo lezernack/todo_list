@@ -38,7 +38,7 @@ addTaskButton.addEventListener("click", (e) => {
 
 // Add code below this comment to do the following:
 // 1. when the page loads, call displayTodo() method
-displayTodo();
+console.log(displayTodo());
 // This method is already in place for you.
 function displayTodo() {
   let todo = localStorage.getItem("todo");
@@ -96,6 +96,9 @@ saveTaskButton.addEventListener("click", () => {
   // then finish out the rest of the following instructions:
   // 1. let id be the same as your saveInd.value
   let id = saveInd.value;
+
+  todoArray.splice(id, 1);
+  todoArray.push(text.value);
   // 2. switch the add and save displays to block and none respectively.
   addTaskButton.style.display = "block";
 
@@ -105,5 +108,5 @@ saveTaskButton.addEventListener("click", () => {
   // 4. and use the localstorage method setItem, pass in todo and stringify the array.
   localStorage.setItem("todo", JSON.stringify(todoArray));
   // 5. display todo method called.
-  displayTodo();
+  return displayTodo();
 });
